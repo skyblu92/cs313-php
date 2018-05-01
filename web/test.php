@@ -6,11 +6,8 @@
 <body>
 	<p>This is a test</p>
 	<?php
-	$x = 5;
-
-	$y = $x + 5;
-
-	echo "<p>$y</p>";
+	for ($x = 0; $x <= 10; $x++)
+		echo "<div class="div$x">Div $x</div>";
 
 	?>
 </body>
