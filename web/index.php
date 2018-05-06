@@ -34,9 +34,9 @@
 										</header>
 										<p>Welcome to my page. I love engineering in general (not just of the software variety!) and love to learn how things work. I'm currently pursuing a Bachelor's degree in Software Engineering/Automotive Engineering. If you have car questions, I'm the guy to ask! I also love shooting guns at the range, video games, and cooking!</p>
 										<?php
-											date_default_timezone_set('America/Salt Lake City');
-											$current_date = date('d/m/Y =|= H:i:s');
-											echo "<p>Current date (PHP test) - <strong>$current_date</strong></p>";
+											date_default_timezone_set('America/Chicago');
+											$current_date = date('d/m/Y | H:i:s');
+											echo "<p><strong>date/time page was loaded (PHP test) - $current_date</strong></p>";
 										?>
 										<ul class="actions">
 											<li><a href="#" class="button big">Learn More</a></li>
