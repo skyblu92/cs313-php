@@ -40,11 +40,12 @@
 											 $current_date</strong></p>";
 										?>
 										<ul class="actions">
-											<li><a href="#" class="button big">Learn More</a></li>
+											<li><a href="#" class="button big">learn more!</a></li>
 										</ul>
+										<p>(Button goes nowhere at the moment)</p>
 									</div>
 									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
+										<img src="images/profilepic.jpg" alt="" />
 									</span>
 								</section>
 
