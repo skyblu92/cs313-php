@@ -21,7 +21,7 @@
 									<ul class="icons">
 										<li><a href="https://www.facebook.com/skyler.blumenthal" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="www.linkedin.com/in/skyler-blumenthal-a93996109" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://www.linkedin.com/in/skyler-blumenthal-a93996109" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									</ul>
 								</header>
 
@@ -35,7 +35,7 @@
 										<p>Welcome to my page. I love engineering in general (not just of the software variety!) and love to learn how things work. I'm currently pursuing a Bachelor's degree in Software Engineering/Automotive Engineering. If you have car questions, I'm the guy to ask! I also love shooting guns at the range, video games, and cooking!</p>
 										<?php
 											date_default_timezone_set('America/Boise');
-											$current_date = date('d/m/Y | H:i:s');
+											$current_date = date('m/d/Y | H:i:s');
 											echo "<p><strong>(PHP test) Date/Time page was loaded:</br>
 											 $current_date</strong></p>";
 										?>
@@ -73,7 +73,7 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">Homepage</a></li>
+										<li><a href="index.php">Homepage</a></li>
 										<li><a href="generic.html">Homework/assignments</a></li>
 										<li><a href="elements.html">Other menu (WIP)</a></li>
 										<li>
