@@ -34,6 +34,7 @@
 
 										session_start();
 										$key_sessionCount = "session-count";
+										$_SESSION["item"] = "thing";
 
 										if (isset($_SESSION[$key_sessionCount])) {
 											$_SESSION[$key_sessionCount]++;
@@ -45,7 +46,8 @@
 										$count = $_SESSION[$key_sessionCount];
 										?>
 										<p>sessions are happening...<br>
-										You've been here <?php echo $count; ?> times</p>
+										You've been here <?php echo $count; ?> times
+										and the item you want is <?php echo $_SESSION["item"]; ?></p>
 								</section>
 
 						</div>
