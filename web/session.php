@@ -32,7 +32,7 @@
 										</p>
 										<?php
 
-										session_start()
+										session_start();
 										$key_sessionCount = "session-count";
 
 										if (isset($_SESSION[$key_sessionCount])) {
