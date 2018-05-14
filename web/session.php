@@ -43,13 +43,13 @@
 						    <h2>Item1</h2>
 						        <form style="display:inline" action="add.php" method="post">
 						            <input type="hidden" name="item" value="item1">
-						            <input type="submit">
+						            <input style="display:inline" type="submit">
 						        </form>
 
 						    <h2>Item1</h2>
 						        <form style="display:inline" action="add.php" method="post">
 						            <input type="hidden" name="item" value="item1">
-						            <input type="submit">
+						            <input style="display:inline" type="submit">
 						        </form>
 
 						    <h2>Item1</h2>
