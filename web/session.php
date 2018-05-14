@@ -41,15 +41,15 @@
 										-->
 
 						    <h2>Item1</h2>
-						        <form style="display:inline" action="add.php" method="post">
-						            <input type="hidden" name="item" value="item1">
-						            <input style="display:inline" type="submit">
+						        <form style="display:inline-block" action="add.php" method="post">
+						            <input style="display:inline-block" type="hidden" name="item" value="item1">
+						            <input style="display:inline-block" type="submit">
 						        </form>
 
 						    <h2>Item1</h2>
 						        <form style="display:inline" action="add.php" method="post">
-						            <input type="hidden" name="item" value="item1">
-						            <input style="display:inline" type="submit">
+						            <input style="display:inline-block" type="hidden" name="item" value="item1">
+						            <input style="display:inline-block" type="submit">
 						        </form>
 
 						    <h2>Item1</h2>
