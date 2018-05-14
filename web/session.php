@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+$_SESSION["itemName"]=array();
+$_SESSION["itemPrice"]=array();
 
 ?>
 
