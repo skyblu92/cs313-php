@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+
+?>
+
 <!DOCTYPE HTML>
 
 <html>
@@ -18,52 +24,53 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
+
+
 							<!-- Content -->
 								<section>
 									<header class="main">
 										<h1>Shopping Cart Test</h1>
+										<?php 
+										  echo $_SESSION["itemName"];
+										?>
 									</header>
 
 									<!-- Content -->
 										<h2 id="content">Sample Content</h2>
 										<p>
-											testerino
+											Shopping cart Testing
 
 										</p>
-										<!---
-								<form action="add.php" method="post">
-								<input type="hidden" name="item" value="book1">
-							    <h2>Book #1</h2>
-							            <input type="button" onclick="handleClick('book1')">
-							    <h2>Book #2</h2>
-							            <input type="button" onclick="handleClick('book2')">
-								</form>
-										-->
-							<div style="display:inline-block">
+							<div style="display:inline-block; padding: 5px;">
 						    <h2>Item1</h2>
 						        <form action="add.php" method="post">
-						            <input type="hidden" name="item" value="item1">
+						            <input type="hidden" name="itemName" value="item1">
+						            <input type="hidden" name="itemPrice" value="20.00">
 						            <input type="submit">
 						        </form>
 						    </div>
-							<div style="display:inline-block">
-						    <h2>Item1</h2>
+							<div style="display:inline-block; padding: 5px;">
+						    <h2>Item2</h2>
 						        <form action="add.php" method="post">
-						            <input type="hidden" name="item" value="item1">
+						            <input type="hidden" name="itemName" value="item2">
+						            <input type="hidden" name="itemName" value="25.00">
 						            <input type="submit">
 						        </form>
 						    </div>
-							<div style="display:inline-block">
-						    <h2>Item1</h2>
+							<div style="display:inline-block; padding: 5px;">
+						    <h2>Item3</h2>
 						        <form action="add.php" method="post">
-						            <input type="hidden" name="item" value="item1">
+						            <input type="hidden" name="itemName" value="item3">
+						            <input type="hidden" name="itemName" value="5.00">
 						            <input type="submit">
 						        </form>
 						    </div>
-							<div style="display:inline-block">
-						    <h2>Item1</h2>
+							<div style="display:inline-block; padding: 5px;">
+						    <h2>Item4</h2>
 						        <form action="add.php" method="post">
-						            <input type="hidden" name="item" value="item1">
+						            <input type="hidden" name="itemName" value="item4">
+						            <input type="hidden" name="itemName" value="1.25">
+
 						            <input type="submit">
 						        </form>
 						    </div>
