@@ -39,30 +39,34 @@
 							            <input type="button" onclick="handleClick('book2')">
 								</form>
 										-->
-
-						    <h2 style="display:inline-block">Item1</h2>
-						        <form style="display:inline-block" action="add.php" method="post">
-						            <input style="display:inline-block" type="hidden" name="item" value="item1">
-						            <input style="display:inline-block" type="submit">
-						        </form>
-
-						    <h2 style="display:inline-block">Item1</h2>
-						        <form style="display:inline" action="add.php" method="post">
-						            <input style="display:inline-block" type="hidden" name="item" value="item1">
-						            <input style="display:inline-block" type="submit">
-						        </form>
-
+							<div style="display:inline-block">
 						    <h2>Item1</h2>
 						        <form action="add.php" method="post">
 						            <input type="hidden" name="item" value="item1">
 						            <input type="submit">
 						        </form>
-
+						    </div>
+							<div style="display:inline-block">
 						    <h2>Item1</h2>
 						        <form action="add.php" method="post">
 						            <input type="hidden" name="item" value="item1">
 						            <input type="submit">
 						        </form>
+						    </div>
+							<div style="display:inline-block">
+						    <h2>Item1</h2>
+						        <form action="add.php" method="post">
+						            <input type="hidden" name="item" value="item1">
+						            <input type="submit">
+						        </form>
+						    </div>
+							<div style="display:inline-block">
+						    <h2>Item1</h2>
+						        <form action="add.php" method="post">
+						            <input type="hidden" name="item" value="item1">
+						            <input type="submit">
+						        </form>
+						    </div>
 
 						        
 								</section>
