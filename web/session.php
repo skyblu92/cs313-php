@@ -40,14 +40,14 @@
 								</form>
 										-->
 						<ul>
-							<li>
+							<li style="display: inline;">
 						    <h2>Item1</h2>
 						        <form action="add.php" method="post">
 						            <input type="hidden" name="item" value="item1">
 						            <input type="submit">
 						        </form>
 						    </li>
-							<li> 
+							<li style="display: inline;"> 
 						    <h2>Item1</h2>
 						        <form action="add.php" method="post">
 						            <input type="hidden" name="item" value="item1">
