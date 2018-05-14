@@ -1,7 +1,11 @@
 <?php
 session_start();
+
+if(!isset($_SESSION["itemName"]))
 $_SESSION["itemName"]=array();
-$_SESSION["itemPrice"]=array();
+
+
+//$_SESSION["itemPrice"]=array();
 
 ?>
 
