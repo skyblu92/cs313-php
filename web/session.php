@@ -30,8 +30,12 @@ session_start();
 								<section>
 									<header class="main">
 										<h1>Shopping Cart Test</h1>
+										<p> Your shopping cart:</p>
 										<?php 
-										  echo $_SESSION["itemName"];
+										foreach($_SESSION["itemName"] as $key=>$value)
+											{
+										  	echo 'Item: ' . $value . '<br/>';
+											}
 										?>
 									</header>
 
@@ -53,7 +57,7 @@ session_start();
 						    <h2>Item2</h2>
 						        <form action="add.php" method="post">
 						            <input type="hidden" name="itemName" value="item2">
-						            <input type="hidden" name="itemName" value="25.00">
+						            <input type="hidden" name="itemPrice" value="25.00">
 						            <input type="submit">
 						        </form>
 						    </div>
@@ -61,7 +65,7 @@ session_start();
 						    <h2>Item3</h2>
 						        <form action="add.php" method="post">
 						            <input type="hidden" name="itemName" value="item3">
-						            <input type="hidden" name="itemName" value="5.00">
+						            <input type="hidden" name="itemPrice" value="5.00">
 						            <input type="submit">
 						        </form>
 						    </div>
@@ -69,7 +73,7 @@ session_start();
 						    <h2>Item4</h2>
 						        <form action="add.php" method="post">
 						            <input type="hidden" name="itemName" value="item4">
-						            <input type="hidden" name="itemName" value="1.25">
+						            <input type="hidden" name="itemPrice" value="1.25">
 
 						            <input type="submit">
 						        </form>
