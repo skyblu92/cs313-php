@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>PHP SESSION</title>
+		<title>PHP SHOPPING</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -21,7 +21,7 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Elements</h1>
+										<h1>Shopping Cart Test</h1>
 									</header>
 
 									<!-- Content -->
@@ -39,38 +39,36 @@
 							            <input type="button" onclick="handleClick('book2')">
 								</form>
 										-->
-
+						<ul>
+							<li>
 						    <h2>Item1</h2>
 						        <form action="add.php" method="post">
 						            <input type="hidden" name="item" value="item1">
 						            <input type="submit">
 						        </form>
-						    <h2>Item2</h2>
+						    </li>
+							<li> 
+						    <h2>Item1</h2>
 						        <form action="add.php" method="post">
-						            <input type="hidden" name="item" value="item2">
+						            <input type="hidden" name="item" value="item1">
 						            <input type="submit">
 						        </form>
-						    <h2>Item3</h2>
+						    </li>
+							<li>
+						    <h2>Item1</h2>
 						        <form action="add.php" method="post">
-						            <input type="hidden" name="item" value="item3">
+						            <input type="hidden" name="item" value="item1">
 						            <input type="submit">
 						        </form>
-						    <h2>Item4</h2>
+						    </li>
+							<li>
+						    <h2>Item1</h2>
 						        <form action="add.php" method="post">
-						            <input type="hidden" name="item" value="item4">
+						            <input type="hidden" name="item" value="item1">
 						            <input type="submit">
 						        </form>
-						    <h2>Item5</h2>
-						        <form action="add.php" method="post">
-						            <input type="hidden" name="item" value="item5">
-						            <input type="submit">
-						        </form>
-						    <h2>Item6</h2>
-						        <form action="add.php" method="post">
-						            <input type="hidden" name="item" value="item6">
-						            <input type="submit">
-						        </form>
-
+						    </li>
+						</ul>
 
 						        
 								</section>
