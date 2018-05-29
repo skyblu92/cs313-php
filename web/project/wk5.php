@@ -1,5 +1,27 @@
-<!DOCTYPE HTML>
+<?php
+try
+{
+    $dbUrl = getenv('DATABASE_URL');
+    $dbopts = parse_url($dbUrl);
+    
+    $dbHost = $dbopts["host"];
+    $dbPort = $dbopts["port"];
+    $dbUser = $dbopts["user"];
+    $dbPassword = $dbopts["pass"];
+    $dbName = ltrim($dbopts["path"],'/');
+    
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    
+}
+catch (PDOException $ex)
+{
+  echo 'Error!: ' . $ex->getMessage();
+  die();
+}
+?>
 
+
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Skyler's assignments page</title>
@@ -32,9 +54,15 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Homework</h1>
-										<p> <a href="project/wk5.php">Project: reading database</a> </p>
+										<h1>Games Database</h1>
 									</header>
+									<?php
+										foreach ($db->query('SELECT * FROM games') as $row1)
+										{
+											echo '<p>' . $row1['id'] . ': ' . $row1['name'] . ' -- system: ' . $row1['system_name'] . '</p>';
+											echo '<br/>';
+										}
+									;?>
 						</div>
 					</div>
 

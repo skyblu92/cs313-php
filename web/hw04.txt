@@ -1,0 +1,39 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Describe something from your database that you think came together very nicely.
+The actual logic of the schema was easy enough to figure out; having a many-to-many database and
+the data that goes inside of them is simple to come up with and even write out (if you know the syntax.)
+
+2. Describe something from your database that you think could be improved or extended in the future.
+I think my database itself is lacking in terms of actual content. I'm wrestling with the idea of adding
+a few more features to my project as it might be too ambitious; When planning the project I don't think
+database-heavy work would have been apparent.
+
+3. Briefly describe the "coolest" thing you learned while completing this assignment.
+relational databases are really easy to write up and the actual implementation of them are a lot simpler
+than I expected.
+
+4. Briefly describe two principles of good database design.
+a good database design as we're learning currently in CIT225 is ACID
+A- Atomic. It means that we no matter how complex the interactions are between different
+relationships in the database, it should be a 'all or nothing' approach where if a certain part of a
+transaction failed, the entire transaction must fail so as to not ruin the data.
+C- Consistent. All data written to and retrieved from the database must be valid according to all constraints
+and won't be affected by any unintended changes.
+I- Isolated. If I can remember correctly it basically means that transactions (selects, inserts, etc etc) no matter
+how many are requested at once, will all happen one at a time and won't get the expected results wrong. So if two
+users query the database at the same time it should perform both one after the other and neither user should know anything about a transaction someone else did.
+D- Durable. The data stored and altered in a database must be permanent. This includes keeping data safe from thigns like power outages and crashes.
+
+5. Please select the category you feel best describes your assignment:
+A - Some attempt was made
+B - Developing, but significantly deficient
+C - Slightly deficient, but still mostly adequate
+D - Meets requirements
+E - Shows creativity and excels above and beyond requirements
+
+D - Meets requirements
+
+6. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I did what the assignment asked but I didn't really go above and beyond. I also did create the tables in my Heroku command line and inserted a few things but that's about it. i still have lots of questions for Brother Burton.

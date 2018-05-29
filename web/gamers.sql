@@ -1,0 +1,21 @@
+CREATE TABLE games
+(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(100) NOT NULL,
+	system_name VARCHAR(30)
+);
+
+CREATE TABLE users
+(
+	id SERIAL PRIMARY KEY,
+	firstName VARCHAR(50) NOT NULL,
+	lastName VARCHAR(75),
+	notes VARCHAR(512)
+);
+
+CREATE TABLE users_games
+(
+	id SERIAL PRIMARY KEY,
+	userID INT REFERENCES users(id) NOT NULL,
+	gameID INT REFERENCES games(id) NOT NULL
+);
