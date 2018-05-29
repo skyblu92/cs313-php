@@ -66,7 +66,7 @@ catch (PDOException $ex)
 
 										$statement->execute();
 
-										foreach ($db->query('SELECT * FROM scriptures') as $scrips)
+										foreach ($db->query('SELECT * FROM scripture') as $scrips)
 										{
 											$book = $scrips['book'];
 											$chapter = $scrips['chapter'];
