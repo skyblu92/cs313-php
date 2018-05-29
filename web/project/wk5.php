@@ -60,7 +60,6 @@ catch (PDOException $ex)
 										foreach ($db->query('SELECT * FROM games') as $row1)
 										{
 											echo '<p>' . $row1['id'] . ': ' . $row1['name'] . ' -- system: ' . $row1['system_name'] . '</p>';
-											echo '<br/>';
 										}
 									;?>
 						</div>
