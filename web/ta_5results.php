@@ -71,7 +71,7 @@ catch (PDOException $ex)
 											$book = $scrips['book'];
 											$chapter = $scrips['chapter'];
 											$verse = $scrips['verse'];
-											echo "<p>$book $chapter : $verse </p>"
+											echo "<p>$book $chapter : $verse </p>";
 										}
 										?>
 									</header>
