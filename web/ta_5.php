@@ -64,7 +64,9 @@ catch (PDOException $ex)
 										<?php
 										foreach ($db->query('SELECT * FROM topics') as $boxes)
 										{
-										echo "<input type="checkbox" name="topics[]">" . $boxes['name'] . "<br>";
+											$id = $boxes['id'];
+											$name = $boxes['name'];
+											echo "<input type='checkbox' name='topics[]' value='$id'>$name<br>";
 										}
 										?>
 										<input type="submit">
