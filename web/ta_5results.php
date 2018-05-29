@@ -68,7 +68,10 @@ catch (PDOException $ex)
 
 										foreach ($db->query('SELECT * FROM scriptures') as $scrips)
 										{
-											echo "<p>" . $scrips['book'] " " . $scrips['chapter'] . ":" . $scrips['verse'] . "<br>topic: </p>"
+											$book = $scrips['book'];
+											$chapter = $scrips['chapter'];
+											$verse = $scrips['verse'];
+											echo "<p>$book $chapter : $verse </p>"
 										}
 										?>
 									</header>
