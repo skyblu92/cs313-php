@@ -21,6 +21,7 @@ $statement->bindValue(":date", $date, PDO::PARAM_STR);
 
 $statement->execute();
 
+header("Location: https://peaceful-hamlet-32303.herokuapp.com/courseDetails.php?course_id=" . $courseId);
 
 
 ?>
