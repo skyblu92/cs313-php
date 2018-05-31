@@ -7,9 +7,10 @@ $db = get_db();
 
 $query = "SELECT name, number FROM course WHERE id =$:id";
 
+$statement = $db->prepare($query);
 $statement->bindValue(":id", $courseId);
 
-$statement - $db->prepare($query);
+
 $statement->execute();
 $row = $statement->fetch()
 
