@@ -1,4 +1,5 @@
 <?php
+require("dbConnect.php");
 
 $courseId = htmlspecialchars($_GET["course_id"]);
 
