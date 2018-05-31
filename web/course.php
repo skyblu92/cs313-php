@@ -1,3 +1,21 @@
+<?php
+
+require_once("dbConnect.php");
+$db = get_db();
+
+if (!isset($db)) {
+	die("Database not set");
+}
+
+$query = "SELECT id, name, number FROM course";
+$statement = $db->prepare($query);
+//bind any variables
+
+$statement->execute();
+$courses = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +24,15 @@
 <body>
 	<h1> Courses </h1>
 	<ul>
-		<li><p>Course 1</p></li>
-		<li><p>Course 2</p></li>
-		<li><p>Course 3</p></li>
-		<li><p>Course 4</p></li>
+		<?php
+		foreach ($courses as $course) {
+			$name = $course["name"];
+			$number = $course["number"];
+			echo "<li><p>$number - $name</p></li>";
+		}
+
+
+		?>
 	</ul>
 </body>
 
