@@ -28,7 +28,8 @@ $courses = $statement->fetchAll(PDO::FETCH_ASSOC);
 		foreach ($courses as $course) {
 			$name = $course["name"];
 			$number = $course["number"];
-			echo "<li><p>$number - $name</p></li>";
+			$id = $course["id"];
+			echo "<li><a href='courseDetails.php?course_id=$id'>$number - $name</a></li>";
 		}
 
 
