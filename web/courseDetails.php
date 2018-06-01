@@ -50,11 +50,9 @@ $notes = $statement2->fetch();
 			<?php
 			foreach ($notes as $note)
 			{
-				$date = $note["date"];
-				$content = $note["content"];
 				echo "<li>";
-				echo "<h3>$date</h3>";
-				echo "<p>$content</p>";
+				echo "<h3>" . $note["date"] . "</h3>";
+				echo "<p>" . $note["content"] . "</p>";
 				echo "</li>";
 			}
 			?>
