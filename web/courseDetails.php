@@ -43,11 +43,21 @@ $notes = $statement2->fetch();
 			<textarea name="content" placeholder="Any notes about the class?"></textarea>
 			<br><br>
 			<input type="submit" value="add note">
-
-			<?php
-
-			?>
 		</form>
+
+			<ul>
+			<?php
+			$date = $notes["date"];
+			$content = $notes["content"];
+			foreach ($notes as $note)
+			{
+				echo "<li>";
+				echo "<h3>$date</h3>";
+				echo "<p>$content</p>";
+				echo "</li>";
+			}
+			?>
+			</ul>
 </body>
 
 </html>
