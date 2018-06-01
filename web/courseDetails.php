@@ -48,10 +48,10 @@ $notes = $statement2->fetch();
 
 			<ul>
 			<?php
-			$date = $notes["date"];
-			$content = $notes["content"];
 			foreach ($notes as $note)
 			{
+				$date = $note["date"];
+				$content = $note["content"];
 				echo "<li>";
 				echo "<h3>$date</h3>";
 				echo "<p>$content</p>";
