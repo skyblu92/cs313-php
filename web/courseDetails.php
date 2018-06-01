@@ -6,7 +6,7 @@ $courseId = htmlspecialchars($_GET["course_id"]);
 $db = get_db();
 
 $query = "SELECT name, number FROM course WHERE id =:id";
-$query2 = "SELECT content, date FROM note WHERE course_id=:id";
+$query2 = "SELECT content, date FROM note WHERE course_id=$courseId";
 
 
 
@@ -14,14 +14,12 @@ $statement = $db->prepare($query);
 $statement->bindValue(":id", $courseId);
 
 $statement2 = $db->prepare($query2);
-$statement2->bindValue(":id", $courseId);
-
 
 $statement->execute();
 $statement2->execute();
 
 $row = $statement->fetch();
-$notes = $statement2->fetch();
+$notes = $statement2->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
