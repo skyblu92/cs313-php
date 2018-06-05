@@ -7,7 +7,7 @@ $db = get_db();
 
 $query = "SELECT name, system_name FROM games WHERE id =:id";
 $query2 = "SELECT * FROM users_games WHERE gameID=$gameId";
-$query3 = "SELECT u.firstName, u.notes FROM users u INNER JOIN users_games ug ON u.id = ug.userID WHERE ug.gameID = $gameId";
+$query3 = "SELECT u.firstName, u.notes, ug.gamertag FROM users u INNER JOIN users_games ug ON u.id = ug.userID WHERE ug.gameID = $gameId";
 
 
 
@@ -53,11 +53,12 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 			<ul>
 			<?php
-			foreach ($u_g as $usr)
+			foreach ($users as $usr)
 			{
 				echo "<li>";
-				echo "<h3>gameID " . $usr["gameid"] . "</h3>";
-				echo "<p> userID " . $usr["userid"] . "</p>";
+				echo "<h3>studentName " . $usr["firstName"] . "</h3>";
+				echo "<h4>Gamertag " . $usr["gamertag"] . "</h4>";
+				echo "<p> notes " . $usr["notes"] . "</p>";
 				echo "</li>";
 			}
 			?>
