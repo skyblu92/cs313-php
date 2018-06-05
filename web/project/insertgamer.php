@@ -9,14 +9,14 @@ $notes = htmlspecialchars($_POST["content"]);
 require("../dbConnect.php");
 
 $db = get_db();
-$query = "INSERT INTO users (firstName, notes) VALUES (:fname :notes)";
+$query = "INSERT INTO users (firstName, notes) VALUES (:fname :note)";
 
 echo "test1";
 
 
 $statement = $db->prepare($query);
 $statement->bindValue(":fname", $firstname);
-$statement->bindValue(":notes", $notes, PDO::PARAM_STR);
+$statement->bindValue(":note", $notes, PDO::PARAM_STR);
 
 $statement->execute();
 
@@ -25,14 +25,14 @@ echo "test2";
 $newId = $db->lastInsertId("users_id_seq");
 
 $query2 = "INSERT INTO users_games (userID, gameID, gamertag)
-				VALUES(:uId, $gameId, :gtag)";
+				VALUES(:uId, $gameId, :gmtag)";
 
 echo "test3";
 
 $statement2 = $db->prepare($query2);
 //$statement2 bind values
 $statement2->bindValue(":uId", $newId, PDO::PARAM_INT);
-$statement2->bindValue(":gtag", $gtag, PDO::PARAM_STR);
+$statement2->bindValue(":gmtag", $gtag, PDO::PARAM_STR);
 
 $statement2->execute();
 
