@@ -53,7 +53,7 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 			<ul>
 			<?php
-			echo $users;
+			echo $users["gamertag"];
 			foreach ($users as $usr)
 			{
 				echo "<li>";
