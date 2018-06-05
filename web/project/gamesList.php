@@ -7,7 +7,7 @@ $db = get_db();
 
 $query = "SELECT name, system_name FROM games WHERE id =:id";
 $query2 = "SELECT * FROM users_games WHERE gameID=$gameId";
-$query3 = "SELECT * FROM users WHERE id =:uid";
+$query3 = "SELECT u.firstName, u.notes FROM users u INNER JOIN users_games ug ON u.id = ug.userID WHERE ug.gameID = $gameId";
 
 
 
@@ -16,14 +16,17 @@ $statement->bindValue(":id", $gameId);
 
 $statement2 = $db->prepare($query2);
 
-//$statement3 = $db->prepare($query3);
+$statement3 = $db->prepare($query3);
+
 
 $statement->execute();
 $statement2->execute();
+$statement3->execute();
 
 
 $row = $statement->fetch();
 $u_g = $statement2->fetchAll(PDO::FETCH_ASSOC);
+$users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
