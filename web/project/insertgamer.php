@@ -5,9 +5,9 @@ $firstname = htmlspecialchars($_POST["firstname"]);
 $gtag = htmlspecialchars($_POST["gtag"]);
 $notes = htmlspecialchars($_POST["content"]);
 
-echo "user: $firstname\n";
-echo "gamertag: $gtag\n";
-echo "notes: $notes\n";
+echo "user: $firstname";
+echo "gamertag: $gtag";
+echo "notes: $notes";
 /*
 require("../dbConnect.php");
 
