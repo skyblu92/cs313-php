@@ -9,13 +9,13 @@ $notes = htmlspecialchars($_POST["content"]);
 require("../dbConnect.php");
 
 $db = get_db();
-$query = "INSERT INTO users (firstName, notes) VALUES (:fname :note)";
+$query = "INSERT INTO users (firstName, notes) VALUES (:fname, :note)";
 
 echo "test1";
 
 
 $statement = $db->prepare($query);
-$statement->bindValue(":fname", $firstname);
+$statement->bindValue(":fname", $firstname, PDO::PARAM_STR);
 $statement->bindValue(":note", $notes, PDO::PARAM_STR);
 
 $statement->execute();
