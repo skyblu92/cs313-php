@@ -49,7 +49,7 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 			foreach ($users as $usr)
 			{
 				echo "<li>";
-				echo "<h3>studentName: " . $usr . "</h3>";
+				echo "<h3>studentName: " . $usr[1] . "</h3>";
 				echo "<h4>Gamertag: " . $usr["gamertag"] . "</h4>";
 				echo "<p> notes: " . $usr["notes"] . "</p>";
 				echo "</li>";
