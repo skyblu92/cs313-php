@@ -45,8 +45,8 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 		<form action="insertNote.php" method="POST">
 			<input type="hidden" name="game_id" value="<?php echo $gameId; ?>">
-			<input type="text" name="firstname"><br>
-			<input type="text" name="gtag"><br>
+			Name: <input type="text" name="firstname"><br>
+			Gamertag/username: <input type="text" name="gtag"><br>
 			<textarea name="content" placeholder="Any notes about this game? Times you like to play, strategies, etc."></textarea>
 			<br><br>
 			<input type="submit" value="add gamertag">
@@ -59,8 +59,8 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 			{
 				
 				echo "<li>";
-				echo "<h3>studentName: " . $usr["firstname"] . "</h3>";
-				echo "<h4>Gamertag: " . $usr["gamertag"] . "</h4>";
+				echo "<h3>" . $usr["firstname"] . "</h3>";
+				echo "<h4>" . $usr["gamertag"] . "</h4>";
 				echo "<p> notes: " . $usr["notes"] . "</p>";
 				echo "</li>";
 			}
