@@ -10,7 +10,6 @@ CREATE TABLE users
 	id SERIAL PRIMARY KEY,
 	firstName VARCHAR(50) NOT NULL,
 	lastName VARCHAR(75),
-	gamertag VARCHAR(50) NOT NULL,
 	notes VARCHAR(512)
 );
 
@@ -24,7 +23,9 @@ CREATE TABLE users_games
 (
 	id SERIAL PRIMARY KEY,
 	userID INT REFERENCES users(id) NOT NULL,
-	gameID INT REFERENCES games(id) NOT NULL
+	gameID INT REFERENCES games(id) NOT NULL,
+	gamertag VARCHAR(50) NOT NULL
+
 );
 
 INSERT INTO games(name, system_name) VALUES ('League of Legends', 'PC');
