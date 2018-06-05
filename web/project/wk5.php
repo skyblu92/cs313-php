@@ -74,6 +74,7 @@ $games = $statement->fetchAll(PDO::FETCH_ASSOC);
 									$system = $game["system_name"];
 									$id = $game["id"];
 									echo "<li><a href='gamesList.php?game_id=$id'>$name -- $system</a></li>"; 
+									}
 								?>
 							</ul>
 					</div>
