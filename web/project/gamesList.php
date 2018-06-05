@@ -46,15 +46,15 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 			<ul>
 			<?php
 
-			foreach ($users as $usr => $value)
+			print_r(array_values($users));
+			foreach ($users as $usr)
 			{
-				echo $key . "has the value" . $value;
-				/*
+				
 				echo "<li>";
-				echo "<h3>studentName: " . $usr[1] . "</h3>";
+				echo "<h3>studentName: " . $usr["id"] . "</h3>";
 				echo "<h4>Gamertag: " . $usr["gamertag"] . "</h4>";
 				echo "<p> notes: " . $usr["notes"] . "</p>";
-				echo "</li>";*/
+				echo "</li>";
 			}
 			?>
 			</ul>
