@@ -1,6 +1,5 @@
-<?php
-try
-{
+<?php 
+
     // $dbUrl = getenv('DATABASE_URL');
     // $dbopts = parse_url($dbUrl);
     
@@ -27,12 +26,7 @@ $statement = $db->prepare($query);
 
 $statement->execute();
 $games = $statement->fetchAll(PDO::FETCH_ASSOC);
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-} 
+
 
 ?>
 
@@ -74,7 +68,7 @@ catch (PDOException $ex)
 									<h3>Click on a game logo to find out who at BYU-I plays!</h3>
 								</header>
 								<ul>
-								<?php
+								<?php 
 									foreach ($games as $game) {
 									$name = $game["name"];
 									$system = $game["system_name"];
