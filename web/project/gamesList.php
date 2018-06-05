@@ -7,7 +7,7 @@ $db = get_db();
 
 $query = "SELECT name, system_name FROM games WHERE id =:id";
 $query2 = "SELECT * FROM users_games WHERE gameID=$gameId";
-$query3 = "SELECT u.firstName, u.notes, ug.gamertag FROM users u JOIN users_games ug ON u.id = ug.userID WHERE ug.gameID = $gameId";
+$query3 = "SELECT * FROM users u FULL JOIN users_games ug ON u.id = ug.userID WHERE ug.gameID = $gameId";
 
 
 
