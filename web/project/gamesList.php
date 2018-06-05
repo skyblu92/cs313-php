@@ -43,7 +43,7 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 		?>
 
-		<form action="insertNote.php" method="POST">
+		<form action="insertgamer.php" method="POST">
 			<input type="hidden" name="game_id" value="<?php echo $gameId; ?>">
 			Name: <input type="text" name="firstname"><br>
 			Gamertag/username: <input type="text" name="gtag"><br>
