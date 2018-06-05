@@ -43,10 +43,18 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 		?>
 
+		<form action="insertNote.php" method="POST">
+			<input type="hidden" name="game_id" value="<?php echo $gameId; ?>">
+			<input type="text" name="firstname"><br>
+			<input type="text" name="gtag"><br>
+			<textarea name="content" placeholder="Any notes about this game? Times you like to play, strategies, etc."></textarea>
+			<br><br>
+			<input type="submit" value="add gamertag">
+		</form>
+
 			<ul>
 			<?php
 
-			print_r(array_values($users));
 			foreach ($users as $usr)
 			{
 				
