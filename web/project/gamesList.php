@@ -51,7 +51,7 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 			{
 				
 				echo "<li>";
-				echo "<h3>studentName: " . $usr["id"] . "</h3>";
+				echo "<h3>studentName: " . $usr["firstname"] . "</h3>";
 				echo "<h4>Gamertag: " . $usr["gamertag"] . "</h4>";
 				echo "<p> notes: " . $usr["notes"] . "</p>";
 				echo "</li>";
