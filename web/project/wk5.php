@@ -32,7 +32,8 @@ catch (PDOException $ex)
 {
   echo 'Error!: ' . $ex->getMessage();
   die();
-}
+} 
+
 ?>
 
 
@@ -78,7 +79,7 @@ catch (PDOException $ex)
 									$name = $game["name"];
 									$system = $game["system_name"];
 									$id = $game["id"];
-									echo "<li><a href='gamesList.php?game_id=$id'>$name -- $system</a></li>";
+									echo "<li><a href='gamesList.php?game_id=$id'>$name -- $system</a></li>"; 
 								?>
 							</ul>
 					</div>
