@@ -53,13 +53,13 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 			<ul>
 			<?php
-
+			echo $users;
 			foreach ($users as $usr)
 			{
 				echo "<li>";
-				echo "<h3>studentName " . $usr["firstName"] . "</h3>";
-				echo "<h4>Gamertag " . $usr["gamertag"] . "</h4>";
-				echo "<p> notes " . $usr["notes"] . "</p>";
+				echo "<h3>studentName: " . $usr["firstName"] . "</h3>";
+				echo "<h4>Gamertag: " . $usr["gamertag"] . "</h4>";
+				echo "<p> notes: " . $usr["notes"] . "</p>";
 				echo "</li>";
 			}
 			?>
