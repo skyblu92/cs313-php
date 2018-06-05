@@ -13,7 +13,7 @@
     // $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    
 
 
-require_once("dbConnect.php");
+require_once("../dbConnect.php");
 $db = get_db();
 
 if (!isset($db)) {
