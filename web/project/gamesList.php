@@ -7,7 +7,7 @@ $db = get_db();
 
 $query = "SELECT name, system_name FROM games WHERE id =:id";
 $query2 = "SELECT * FROM users_games WHERE gameID=$gameId";
-$query3 = "SELECT u.firstName, u.notes, ug.gamertag FROM users u FULL OUTER JOIN users_games ug ON u.id = ug.userID WHERE ug.gameID = $gameId";
+$query3 = "SELECT u.firstName, u.notes, ug.gamertag FROM users u JOIN users_games ug ON u.id = ug.userID WHERE ug.gameID = $gameId";
 
 
 
@@ -42,21 +42,14 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 
 		?>
-<!--
-		<form action="insertUser.php" method="POST">
-			<input type="hidden" name="course_id" value="<?php echo $courseId; ?>">
-			<input type="date" name="date"><br>
-			<textarea name="content" placeholder="Any notes about the class?"></textarea>
-			<br><br>
-			<input type="submit" value="add note">
-		</form> -->
 
 			<ul>
 			<?php
+
 			foreach ($users as $usr)
 			{
 				echo "<li>";
-				echo "<h3>studentName: " . $usr["firstName"] . "</h3>";
+				echo "<h3>studentName: " . $usr['firstName'] . "</h3>";
 				echo "<h4>Gamertag: " . $usr["gamertag"] . "</h4>";
 				echo "<p> notes: " . $usr["notes"] . "</p>";
 				echo "</li>";
