@@ -15,7 +15,7 @@ echo "test1";
 
 
 $statement = $db->prepare($query);
-$statement->bindValue(":fname", $firstname, PDO::PARAM_STR);
+$statement->bindValue(":fname", $firstname);
 $statement->bindValue(":notes", $notes, PDO::PARAM_STR);
 
 $statement->execute();
