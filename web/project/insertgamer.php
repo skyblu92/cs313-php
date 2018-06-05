@@ -33,7 +33,8 @@ $statement2->bindValue(":gtag", $gtag, PDO::PARAM_STR);
 
 $statement2->execute();
 */
-header("Location: https://peaceful-hamlet-32303.herokuapp.com/project/gamesList.php?game_id=);$gameId");
+
+header("Location: https://peaceful-hamlet-32303.herokuapp.com/project/gamesList.php?game_id=$gameId");
 
 
 ?>
