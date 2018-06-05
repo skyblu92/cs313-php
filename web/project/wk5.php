@@ -79,7 +79,7 @@ catch (PDOException $ex)
 									$system = $game["system_name"];
 									$id = $game["id"];
 									echo "<li><a href='gamesList.php?game_id=$id'>$name -- $system</a></li>";
-								;?>
+								?>
 							</ul>
 					</div>
 				</div>
