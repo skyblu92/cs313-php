@@ -56,7 +56,7 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 			<input type="submit" value="add gamertag">
 		</form>
 
-			<ul>
+			<ul class="uk-list-divider">
 			<?php
 
 			foreach ($users as $usr)
