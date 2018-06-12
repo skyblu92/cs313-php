@@ -35,6 +35,7 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 	<title>Games overview</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/uikit.css" />
+		<link rel="stylesheet" href="css/card.css" />
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
 </head>
@@ -56,20 +57,32 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 			<input type="submit" value="add gamertag">
 		</form>
 
-			<ul class="uk-list-divider">
+				<div class="row">
 			<?php
+
+			
+
 
 			foreach ($users as $usr)
 			{
+				$firstname = $usr["firstname"]; 
+				$lastname = $usr["lastname"];
+				$gamertag = $usr["gamertag"];
+				$notes = $usr["notes"];
+
+
+				echo '	<div class="card">
+						<div class="wrapper">
+						<div class="data">
+						<div class="content">';
+				echo '	<span class="author">$firstname $lastname</span>';
+				echo '	<h1 class="title">$gamertag</h1>';
+				echo '	<p class="text">$notes</p>';
+				echo '	</div></div></div></div>';
 				
-				echo "<li>";
-				echo "<h3>" . $usr["firstname"] . "</h3>";
-				echo "<h4>" . $usr["gamertag"] . "</h4>";
-				echo "<p> notes: " . $usr["notes"] . "</p>";
-				echo "</li>";
 			}
 			?>
-			</ul>
+		</div>
 </body>
 
 </html>
