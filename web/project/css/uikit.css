@@ -764,6 +764,8 @@ a.uk-link-reset:hover,
   background-position: 50% 50%;
   float: left;
 }
+
+
 /* Size modifier
  ========================================================================== */
 .uk-list-large > li:nth-child(n+2),
@@ -1301,6 +1303,7 @@ button.uk-icon:not(:disabled) {
  */
 .uk-input {
   overflow: visible;
+  margin: 15px;
 }
 /*
  * Remove the inheritance of text transform in Firefox.
@@ -1534,7 +1537,7 @@ select.uk-form-width-xsmall {
   width: 200px;
 }
 .uk-form-width-large {
-  width: 500px;
+  width: 420px;
 }
 /* Select
  ========================================================================== */
