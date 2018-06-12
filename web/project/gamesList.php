@@ -47,8 +47,8 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 
 		?>
-
-		<form class= "uk-form-width-small" action="insertgamer.php" method="POST">
+<!--
+		<form class= "uk-form-width-large" action="insertgamer.php" method="POST">
 			<input type="hidden" name="game_id" value="<?php echo $gameId; ?>">
 			<input class="uk-input" type="text" name="firstname"><br>
 			<input class="uk-input" type="text" name="lastname"><br>
@@ -57,12 +57,35 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 			<br><br>
 			<input type="submit" value="add gamertag">
 		</form>
+-->
 
+
+<form action="insertgamer.php" method="POST">
+    <fieldset class="uk-fieldset">
+
+        <legend class="uk-legend">Insert info</legend>
+
+		<input type="hidden" name="game_id" value="<?php echo $gameId; ?>">
+        <div class="uk-margin">
+            <input class="uk-input" type="text" name="firstname" placeholder="First name">
+		</div>
+        <div class="uk-margin">
+            <input class="uk-input" type="text" name="lastname" placeholder="Last name">
+		</div>
+        <div class="uk-margin">
+            <input class="uk-input" type="text" name="gtag" placeholder="Gamertag">
+        </div>
+
+        <div class="uk-margin">
+			<textarea class="uk-textarea" rows="5" name="content" placeholder="Any notes/comments (what ranking you are, 
+			what hours you play, favorite characters, etc."></textarea>
+		</div>
+		
+		<input type="submit" value="add gamertag">
+    </fieldset>
+</form>
 				<div class="row">
 			<?php
-
-			
-
 
 			foreach ($users as $usr)
 			{
