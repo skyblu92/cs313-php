@@ -60,7 +60,7 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 -->
 
 
-<form action="insertgamer.php" method="POST">
+<form class= "uk-form-width-large" action="insertgamer.php" method="POST">
     <fieldset class="uk-fieldset">
 
         <legend class="uk-legend">Insert info</legend>
