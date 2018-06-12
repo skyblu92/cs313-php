@@ -2,6 +2,7 @@
 
 $gameId = htmlspecialchars($_POST["game_id"]);
 $firstname = htmlspecialchars($_POST["firstname"]);
+$lastname = htmlspecialchars($_POST["lastname"]);
 $gtag = htmlspecialchars($_POST["gtag"]);
 $notes = htmlspecialchars($_POST["content"]);
 
@@ -9,13 +10,14 @@ $notes = htmlspecialchars($_POST["content"]);
 require("../dbConnect.php");
 
 $db = get_db();
-$query = "INSERT INTO users (firstName, notes) VALUES (:fname, :note)";
+$query = "INSERT INTO users (firstName, lastname, notes) VALUES (:fname, :lname, :note)";
 
 echo "test1";
 
 
 $statement = $db->prepare($query);
 $statement->bindValue(":fname", $firstname, PDO::PARAM_STR);
+$statement->bindValue(":lname", $lastname, PDO::PARAM_STR);
 $statement->bindValue(":note", $notes, PDO::PARAM_STR);
 
 $statement->execute();
@@ -36,7 +38,6 @@ $statement2->bindValue(":gmtag", $gtag, PDO::PARAM_STR);
 
 $statement2->execute();
 
-echo "test4";
 
 
 header("Location: https://peaceful-hamlet-32303.herokuapp.com/project/gamesList.php?game_id=$gameId");
