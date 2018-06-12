@@ -76,15 +76,15 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
             <input class="uk-input" type="text" name="gtag" placeholder="Gamertag">
         </div>
 
-        <div class="uk-margin">
+        <div class="uk-margin-left">
 			<textarea class="uk-textarea" rows="5" name="content" placeholder="Any notes/comments (what ranking you are, 
 			what hours you play, favorite characters, etc."></textarea>
 		</div>
 		
-		<input type="submit" value="add gamertag">
+		<input class="uk-input" type="submit" value="add gamertag">
     </fieldset>
 </form>
-				<div class="row">
+			<div class="row">
 			<?php
 
 			foreach ($users as $usr)
