@@ -6,7 +6,6 @@ body {
   background-image: linear-gradient(to right, #1a629ca4, #287a3950);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
   font-family: 'Open Sans', sans-serif;
 }
 h1 {
