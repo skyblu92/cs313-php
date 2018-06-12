@@ -50,9 +50,10 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 		<form action="insertgamer.php" method="POST">
 			<input type="hidden" name="game_id" value="<?php echo $gameId; ?>">
-			Name: <input type="text" name="firstname"><br>
-			Gamertag/username: <input type="text" name="gtag"><br>
-			<textarea name="content" placeholder="Any notes about this game? Times you like to play, strategies, etc."></textarea>
+			<input class="uk-input" type="text" name="firstname"><br>
+			<input class="uk-input" type="text" name="lastname"><br>
+			<input class="uk-input" type="text" name="gtag"><br>
+			<textarea class= "uk-textarea" name="content" placeholder="Any notes about this game? Times you like to play, strategies, etc."></textarea>
 			<br><br>
 			<input type="submit" value="add gamertag">
 		</form>
