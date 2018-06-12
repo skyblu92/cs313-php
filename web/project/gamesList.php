@@ -35,7 +35,7 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 	<title>Games overview</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/uikit.css" />
-		<link rel="stylesheet" href="css/card.scss" />
+		<link rel="stylesheet" href="css/card.css" />
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
 </head>
