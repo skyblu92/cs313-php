@@ -48,7 +48,7 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 		?>
 
-		<form action="insertgamer.php" method="POST">
+		<form class= "uk-form-width-small" action="insertgamer.php" method="POST">
 			<input type="hidden" name="game_id" value="<?php echo $gameId; ?>">
 			<input class="uk-input" type="text" name="firstname"><br>
 			<input class="uk-input" type="text" name="lastname"><br>
