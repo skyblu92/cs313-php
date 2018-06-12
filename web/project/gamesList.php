@@ -75,9 +75,9 @@ $users = $statement3->fetchAll(PDO::FETCH_ASSOC);
 						<div class="wrapper">
 						<div class="data">
 						<div class="content">';
-				echo '	<span class="author">$firstname $lastname</span>';
-				echo '	<h1 class="title">$gamertag</h1>';
-				echo '	<p class="text">$notes</p>';
+				echo "	<span class='author'>$firstname $lastname </span>";
+				echo "	<h1 class='title'>$gamertag</h1>";
+				echo "	<p class='text'>$notes</p>";
 				echo '	</div></div></div></div>';
 				
 			}
